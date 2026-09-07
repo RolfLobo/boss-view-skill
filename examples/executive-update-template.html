@@ -42,7 +42,9 @@
   a { color: inherit; text-decoration-color: var(--muted); text-underline-offset: 3px; }
   .page { width: min(960px, 100%); margin: 0 auto; padding: 44px 56px 88px; }
 
-  .report-badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; padding: 7px 14px; background: var(--accent); border: 2px solid var(--ink); border-radius: 5px; box-shadow: 3px 3px 0 var(--ink); font-size: 14px; font-weight: 800; }
+  .report-tags { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 18px; }
+  .report-badge { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; background: var(--accent); border: 2px solid var(--ink); border-radius: 5px; box-shadow: 3px 3px 0 var(--ink); font-size: 14px; font-weight: 800; }
+  .manage-tag { padding: 5px 11px; background: var(--paper-2); border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
   .meta-line { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 14px; color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
   .meta-line .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--ink); }
   h1 { max-width: 850px; margin: 0; font-family: var(--display); font-size: clamp(42px, 6vw, 64px); line-height: 1.04; letter-spacing: -0.025em; font-weight: 900; }
@@ -196,7 +198,10 @@
 
 <main class="page">
   <header>
-    <div class="report-badge">💼 Executive Report</div>
+    <div class="report-tags">
+      <div class="report-badge">💼 Executive Report</div>
+      <span class="manage-tag">Manage</span>
+    </div>
     <div class="meta-line">
       <span>Boss View</span><span class="dot"></span>
       <span>{{AUDIENCE_LENS}}</span><span class="dot"></span>
